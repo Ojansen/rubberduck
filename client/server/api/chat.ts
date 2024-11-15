@@ -18,8 +18,9 @@ export default defineEventHandler(async (event) => {
   })
 
   const chatEngine = new SimpleChatEngine()
+
   const stream = await chatEngine.chat({
-    message: messages,
+    message: messages[messages.length - 1].content,
     stream: true,
   })
 

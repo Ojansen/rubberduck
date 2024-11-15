@@ -1,50 +1,30 @@
 <template>
-  <div class="container mx-auto h-full flex gap-4 flex-col">
-    <div class="flex gap-3">
-      <form
-        action="/api/store"
-        method="get"
-      >
-        <button
-          type="submit"
-          class="btn btn-primary"
-        >
-          Reindex store
-        </button>
-      </form>
-      <button
-        type="button"
-        class="btn btn-error w-fit"
-        @click="reloadNuxtApp()"
-      >
-        New Chat
-      </button>
-    </div>
-    <h1 class="text-2xl font-semibold text-white mb-8">
-      Rubberduck
+  <div class="p-6 h-screen flex gap-4 flex-col text-neutral-50 mx-auto max-w-4xl">
+    <h1 class="text-3xl font-bold mb-8">
+      Rubberduck, quack quack  🦆
     </h1>
-    <div class="max-w-4xl mx-auto grow flex overflow-hidden">
+    <div class="grow flex overflow-hidden">
       <div
-        class="relative grow overflow-y-auto"
+        class="relative grow overflow-y-auto px-6"
       >
-        <div
+        <template
           v-for="m in messages"
           :key="m.id"
         >
           <article
             v-if="m.role === 'user'"
-            class="flex justify-end mb-6"
+            class="flex justify-end mb-6 ml-12"
           >
-            <p class="p-2 bg-neutral-700 text-white rounded w-fit">
+            <p class="p-2 bg-blue-700 rounded w-fit">
               {{ m.content }}
             </p>
           </article>
           <article
             v-if="m.role === 'assistant'"
-            class="prose mb-6 text-neutral-50a"
+            class="prose max-w-none mb-6 mr-12"
             v-html="marked.parse(m.content)"
           />
-        </div>
+        </template>
       </div>
     </div>
     <div class="flex flex-col gap-4">
@@ -57,10 +37,10 @@
           placeholder="Message"
           name="prompt"
           type="text"
-          class="input w-full"
+          class="bg-neutral-800 py-3 px-4 rounded w-full"
         >
         <button
-          class="btn btn-success text-white"
+          class="rounded hover:bg-green-900 transition-all bg-green-700 px-6 py-3 text-white"
           type="submit"
           :disabled="isLoading"
         >

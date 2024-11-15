@@ -1,0 +1,52 @@
+{
+  "name": "rubberduck",
+  "version": "1.0.0",
+  "description": "A duck to talk code with.",
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build && npm run client:build",
+    "client:build": "nuxi generate client",
+    "client:dev": "nuxi dev client --port 3300",
+    "dev": "npm run play:dev",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare client",
+    "prepare": "nuxi prepare client",
+    "play:dev": "nuxi dev playground",
+    "play:prod": "npm run prepack && nuxi dev playground",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@nuxt/devtools-kit": "^1.6.0",
+    "@nuxt/kit": "^3.14.159",
+    "sirv": "^3.0.0"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.2.4",
+    "@nuxt/devtools": "^1.6.0",
+    "@nuxt/devtools-ui-kit": "^1.6.0",
+    "@nuxt/eslint-config": "^0.6.1",
+    "@nuxt/module-builder": "^0.8.4",
+    "@nuxt/schema": "^3.14.159",
+    "@nuxt/test-utils": "^3.14.4",
+    "changelogen": "^0.5.7",
+    "eslint": "^9.14.0",
+    "nuxt": "^3.14.159",
+    "vitest": "^2.1.5"
+  },
+  "packageManager": "pnpm@9.12.3"
+}

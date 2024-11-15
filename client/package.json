@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "my-module-client",
+  "dependencies": {
+    "@ai-sdk/openai": "^0.0.72",
+    "@ai-sdk/vue": "^0.0.59",
+    "ai": "^3.4.33",
+    "llamaindex": "^0.8.14",
+    "marked": "^15.0.0",
+    "zod": "^3.23.8"
+  }
+}

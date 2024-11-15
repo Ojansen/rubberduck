@@ -1,9 +1,10 @@
 {
   "private": true,
-  "name": "my-module-client",
+  "name": "rubberduck-client",
   "dependencies": {
     "@ai-sdk/openai": "^0.0.72",
     "@ai-sdk/vue": "^0.0.59",
+    "@nuxtjs/tailwindcss": "^6.12.2",
     "ai": "^3.4.33",
     "llamaindex": "^0.8.14",
     "marked": "^15.0.0",

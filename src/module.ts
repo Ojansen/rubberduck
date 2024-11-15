@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
 import { startSubprocess } from '@nuxt/devtools-kit'
+import defu from 'defu'
 import { setupDevToolsUI } from './devtools'
 
 // Module options TypeScript interface definition
@@ -11,6 +12,14 @@ export interface ModuleOptions {
    * @default true
    */
   devtools: boolean
+
+  llm: 'ollama' | 'openai'
+
+  modelName: string
+
+  systemMessage: string
+
+  OpenAiApiKey: string
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -21,9 +30,13 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: {
     devtools: true,
+    llm: 'ollama',
+    modelName: 'llama3.2:3b',
   },
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
+
+    nuxt.options.runtimeConfig.public.duck = defu(nuxt.options.runtimeConfig.public.duck)
 
     if (!nuxt.options.dev) {
       return
@@ -37,7 +50,7 @@ export default defineNuxtModule<ModuleOptions>({
       },
       {
         id: 'rubberduck:client',
-        name: 'My Module Client Dev',
+        name: 'rubberduck Client Dev',
       },
     )
 

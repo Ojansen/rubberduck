@@ -7,7 +7,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 - Description: My new Nuxt module
 -->
 
-# My Module
+# Rubberduck
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -32,7 +32,7 @@ My new Nuxt module integrated with the [Nuxt Devtools](https://github.com/nuxt/d
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D rubberduck
 
 # Using yarn
 yarn add --dev my-module
@@ -46,7 +46,7 @@ npm install --save-dev my-module
 ```js
 export default defineNuxtConfig({
   modules: [
-    'my-module'
+    'rubberduck'
   ]
 })
 ```

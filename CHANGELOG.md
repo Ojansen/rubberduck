@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/Ojansen/rubberduck/compare/v0.0.2...v0.0.3)
+
+### 🏡 Chore
+
+- Prepare release ([c3da723](https://github.com/Ojansen/rubberduck/commit/c3da723))
+
+### ❤️ Contributors
+
+- Obe Jansen <obe.jansen@bttr.nl>
+
 ## v0.0.2
 
 

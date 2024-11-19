@@ -49,7 +49,7 @@
             ref="textarea"
             v-model="input"
             :autofocus="true"
-            placeholder="Stel je vraag..."
+            placeholder="Message"
             class="max-h-52 leading-8 min-h-14 resize-none bg-neutral-800 py-3 px-4 rounded w-full"
           />
 

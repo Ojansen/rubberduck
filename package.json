@@ -16,6 +16,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ojansen/rubberduck"
+  },
   "scripts": {
     "prepack": "nuxt-module-build && npm run client:build",
     "client:build": "nuxi generate client",
@@ -25,7 +29,7 @@
     "prepare": "nuxi prepare client",
     "play:dev": "nuxi dev playground",
     "play:prod": "npm run prepack && nuxi dev playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish --public && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"

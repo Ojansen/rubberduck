@@ -1,9 +1,5 @@
-import { resolve } from 'node:path'
 import { defineNuxtModule, addPlugin, createResolver, addServerHandler } from '@nuxt/kit'
-import { startSubprocess } from '@nuxt/devtools-kit'
-import defu from 'defu'
 import { setupDevToolsUI } from './devtools'
-import { getModels } from './runtime/ollama'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {

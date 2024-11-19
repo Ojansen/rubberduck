@@ -1,6 +1,6 @@
 {
   "name": "@obejansen/rubberduck",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A duck to talk code with.",
   "license": "ISC",
   "type": "module",

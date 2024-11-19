@@ -1,5 +1,5 @@
 {
-  "name": "@obejansen/rubberduck",
+  "name": "nuxt-devtools-rubberduck",
   "version": "0.0.3",
   "description": "A duck to talk code with.",
   "license": "ISC",
@@ -20,6 +20,16 @@
     "type": "git",
     "url": "https://github.com/Ojansen/rubberduck"
   },
+  "author": "Obe Jansen",
+  "keywords": [
+    "nuxt",
+    "devtools",
+    "llm",
+    "ai",
+    "local-llm",
+    "rubberduck",
+    "module"
+  ],
   "scripts": {
     "prepack": "nuxt-module-build && npm run client:build",
     "client:build": "nuxi generate client",

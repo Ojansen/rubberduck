@@ -17,25 +17,25 @@ My new Nuxt module integrated with the [Nuxt Devtools](https://github.com/nuxt/d
 
 ## Quick Setup
 
-1. Add `@obejansen/rubberduck` dependency to your project
+1. Add `nuxt-devtools-rubberduck` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @obejansen/rubberduck
+pnpm add -D nuxt-devtools-rubberduck
 
 # Using yarn
-yarn add --dev @obejansen/rubberduck
+yarn add --dev nuxt-devtools-rubberduck
 
 # Using npm
-npm install --save-dev @obejansen/rubberduck
+npm install --save-dev nuxt-devtools-rubberduck
 ```
 
-2. Add `rubberduck` to the `modules` section of `nuxt.config.ts`
+2. Add `nuxt-devtools-rubberduck` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    '@obejansen/rubberduck'
+    'nuxt-devtools-rubberduck'
   ]
 })
 ```
@@ -69,12 +69,12 @@ npm run release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@obejansen/rubberduck/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/@obejansen/rubberduck
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-devtools-rubberduck/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/nuxt-devtools-rubberduck
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/@obejansen/rubberduck.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/@obejansen/rubberduck
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-devtools-rubberduck.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/nuxt-devtools-rubberduck
 
-[license-src]: https://img.shields.io/npm/l/@obejansen/rubberduck.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/@obejansen/rubberduck
+[license-src]: https://img.shields.io/npm/l/nuxt-devtools-rubberduck.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/nuxt-devtools-rubberduck
 

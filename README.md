@@ -12,33 +12,22 @@ Find and replace all on all files (CMD+SHIFT+F):
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
 
 My new Nuxt module integrated with the [Nuxt Devtools](https://github.com/nuxt/devtools).
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
-
-## Features
-
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
-
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `@obejansen/rubberduck` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D rubberduck
+pnpm add -D @obejansen/rubberduck
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev @obejansen/rubberduck
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev @obejansen/rubberduck
 ```
 
 2. Add `rubberduck` to the `modules` section of `nuxt.config.ts`
@@ -46,12 +35,12 @@ npm install --save-dev my-module
 ```js
 export default defineNuxtConfig({
   modules: [
-    'rubberduck'
+    '@obejansen/rubberduck'
   ]
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+That's it! You can now use the duck in your Nuxt app ✨
 
 ## Development
 
@@ -80,14 +69,12 @@ npm run release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/my-module
+[npm-version-src]: https://img.shields.io/npm/v/@obejansen/rubberduck/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@obejansen/rubberduck
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/my-module
+[npm-downloads-src]: https://img.shields.io/npm/dm/@obejansen/rubberduck.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@obejansen/rubberduck
 
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/my-module
+[license-src]: https://img.shields.io/npm/l/@obejansen/rubberduck.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@obejansen/rubberduck
 
-[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
-[nuxt-href]: https://nuxt.com

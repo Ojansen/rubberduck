@@ -1,5 +1,5 @@
 {
-  "name": "rubberduck",
+  "name": "@obejansen/rubberduck",
   "version": "0.0.1",
   "description": "A duck to talk code with.",
   "license": "ISC",

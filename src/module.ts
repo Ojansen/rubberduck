@@ -40,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     addServerHandler({
       route: '/api/chat',
-      handler: resolver.resolve('./runtime/chat.ts'),
+      handler: resolver.resolve('./runtime/chat'),
     })
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`

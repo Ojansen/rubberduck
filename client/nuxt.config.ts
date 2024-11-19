@@ -1,7 +1,9 @@
 import { resolve } from 'pathe'
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/devtools-ui-kit'],
+  modules: [
+    '@nuxt/devtools-ui-kit',
+  ],
 
   ssr: false,
 
@@ -11,17 +13,6 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: '/__duck',
-  },
-
-  routeRules: {
-    'api/**': {
-      cors: true,
-      headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
-        'access-control-allow-methods': '*',
-        'access-control-allow-headers': '*',
-      },
-    },
   },
 
   compatibilityDate: '2024-08-21',

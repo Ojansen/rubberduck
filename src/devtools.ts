@@ -1,6 +1,7 @@
 import { existsSync } from 'node:fs'
 import type { Nuxt } from 'nuxt/schema'
 import type { Resolver } from '@nuxt/kit'
+import { addCustomTab } from '@nuxt/devtools-kit'
 
 const DEVTOOLS_UI_ROUTE = '/__duck'
 const DEVTOOLS_UI_LOCAL_PORT = 3300
@@ -25,27 +26,21 @@ export function setupDevToolsUI(nuxt: Nuxt, resolver: Resolver) {
       config.server = config.server || {}
       config.server.proxy = config.server.proxy || {}
       config.server.proxy[DEVTOOLS_UI_ROUTE] = {
-        target: 'http://localhost:' + DEVTOOLS_UI_LOCAL_PORT + DEVTOOLS_UI_ROUTE,
+        target: `http://localhost:${DEVTOOLS_UI_LOCAL_PORT}${DEVTOOLS_UI_ROUTE}`,
         changeOrigin: true,
-        followRedirects: true,
+        followRedirects: false,
         rewrite: path => path.replace(DEVTOOLS_UI_ROUTE, ''),
       }
     })
   }
 
-  nuxt.hook('devtools:customTabs', (tabs) => {
-    tabs.push({
-      // unique identifier
-      name: 'rubberduck',
-      // title to display in the tab
-      title: 'Rubberduck',
-      // any icon from Iconify, or a URL to an image
-      icon: 'mdi:duck',
-      // iframe view
-      view: {
-        type: 'iframe',
-        src: DEVTOOLS_UI_ROUTE,
-      },
-    })
+  addCustomTab({
+    name: 'rubberduck',
+    title: 'Rubberduck',
+    icon: 'mdi:duck',
+    view: {
+      type: 'iframe',
+      src: DEVTOOLS_UI_ROUTE,
+    },
   })
 }

@@ -41,7 +41,7 @@ yarn add --dev my-module
 npm install --save-dev my-module
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `rubberduck` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({

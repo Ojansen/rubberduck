@@ -1,3 +1,4 @@
+import { defineEventHandler, readBody } from 'h3'
 import { LlamaIndexAdapter } from 'ai'
 import {
   Settings,

@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/Ojansen/rubberduck/compare/v0.0.3...v0.0.4)
+
+### 🏡 Chore
+
+- Update namespace ([8de384f](https://github.com/Ojansen/rubberduck/commit/8de384f))
+
+### ❤️ Contributors
+
+- Obe Jansen <obe.jansen@bttr.nl>
+
 ## v0.0.3
 
 [compare changes](https://github.com/Ojansen/rubberduck/compare/v0.0.2...v0.0.3)

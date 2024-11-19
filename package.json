@@ -1,6 +1,6 @@
 {
   "name": "rubberduck",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A duck to talk code with.",
   "license": "ISC",
   "type": "module",
@@ -31,15 +31,17 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/devtools-kit": "^1.6.0",
-    "@nuxt/kit": "^3.14.159",
-    "sirv": "^3.0.0",
     "@ai-sdk/openai": "^0.0.72",
     "@ai-sdk/vue": "^0.0.59",
+    "@nuxt/devtools-kit": "^1.6.0",
+    "@nuxt/kit": "^3.14.159",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@vueuse/core": "^11.2.0",
     "ai": "^3.4.33",
+    "chat-auto-scroll": "^1.0.1",
     "llamaindex": "^0.8.14",
     "marked": "^15.0.0",
+    "sirv": "^3.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

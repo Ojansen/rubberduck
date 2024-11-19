@@ -8,7 +8,9 @@ import {
 } from 'llamaindex'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event)
+  const { messages, model } = await readBody(event)
+
+  console.log(model)
 
   Settings.embedModel = new OllamaEmbedding({
     model: 'nomic-embed-text',
